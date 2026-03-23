@@ -2,7 +2,7 @@
 
 ---
 
-## _The implementation and Reflection is in TF_Implementation.md_
+## _The Implementation and Reflection is in TF_Implementation.md_
 
 ---
 
