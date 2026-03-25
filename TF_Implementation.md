@@ -1,6 +1,6 @@
 ## Summary:
 
-The main concept students needed to understand in this Tinker was how a simple mood classification system works from start to finish, including preprocessing text, scoring it based on rules, and converting that score into a final label. Students also needed to understand that both the rule based and ML versions are heavily shaped by the data and labels they create. One of the biggest likely struggles is handling posts that are ambiguous, sarcastic, slang-based, emoji-based, or show mixed emotions, since those cases are not always easy even for us to label consistently. AI was helpful for understanding the starter code, brainstorming dataset examples, and suggesting simple implementation ideas, but it could also be misleading when its suggestions were too repetitive, too generic, or more complicated than what the project actually needed. A good way to guide students without giving away the answer is to ask them to walk through what happens to one sample post from input to final label and explain where the model may be going wrong. The ML comparison also helps show that higher accuracy does not always mean the model is truly better, especially when it is being tested on the same small dataset it trained on.
+The main concept students needed to understand in this Tinker was how a simple mood classification system works from start to finish, including preprocessing text, scoring it based on rules, and converting that score into a final label. Students also needed to understand that both the rule based and ML versions are heavily impacted by the data and labels they create. One of the biggest likely struggles is handling posts that are ambiguous, sarcastic, slang-based, emoji-based, or show mixed emotions, since those cases are not always easy even for us to label consistently. AI was helpful for understanding the starter code, brainstorming dataset examples, and suggesting simple implementation ideas, but it could also be misleading when its suggestions were too repetitive, too generic, missing simple edge cases, or more complicated than what the project actually needed. A good way to guide students without giving away the answer is to ask them to walk through what happens to one sample post from input to final label and explain where the model may be going wrong. The ML comparison also helps show that higher accuracy does not always mean the model is truly better, especially when it is being tested on the same small dataset it trained on.
 
 ---
 
@@ -39,7 +39,7 @@ The main concept students needed to understand in this Tinker was how a simple m
 
 - Understanding why the model may predict something incorrectly even when the code is technically working.
 
-- Understanding that the rule based model does not understand language like a human does. It only reacts to words and rules that were explicitly added.
+- Understanding that the rule based model does not understand language like we do. It only reacts to words and rules that were explicitly added.
 
 - Understanding why the ML model may behave differently from the rule based model even though both use the same dataset.
 
@@ -79,9 +79,9 @@ The main concept students needed to understand in this Tinker was how a simple m
 
 - A model can be working correctly according to its own rules and still produce a wrong or weak prediction.
 
-- Labels are not always objective. Some posts are naturally ambiguous, and disagreement between humans is normal.
+- Labels are not always objective. Some posts are naturally ambiguous, and disagreement between different people is normal.
 
-- The dataset matters a lot. The words and labels students add directly shape how both the rule based and ML versions behave.
+- The dataset matters a lot. The words and labels students add directly impacts how both the rule based and ML versions behave.
 
 - If students get a high accuracy score when running `ml_experiments.py`, they need to ask themselves whether the model is being trained and evaluated on the same dataset.
 
