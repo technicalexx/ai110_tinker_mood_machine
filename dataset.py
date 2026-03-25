@@ -43,6 +43,17 @@ NEGATIVE_WORDS = [
 # ---------------------------------------------------------------------
 
 # Short example posts written as if they were social media updates or messages.
+# SAMPLE_POSTS = [
+#     "I love this class so much",
+#     "Today was a terrible day",
+#     "Feeling tired but kind of hopeful",
+#     "This is fine",
+#     "So excited for the weekend",
+#     "I am not happy about this",
+# ]
+
+# UPDATED POSTS:
+
 SAMPLE_POSTS = [
     "I love this class so much",
     "Today was a terrible day",
@@ -50,7 +61,19 @@ SAMPLE_POSTS = [
     "This is fine",
     "So excited for the weekend",
     "I am not happy about this",
+    "I am tired but proud of myself",
+    "This food was lowkey amazing",
+    "I love getting stuck in traffic",
+    "I am fine 🙂",
+    "My team lost but I played really well",
+    "This meeting could have been an email",
+    "No cap, today was awesome",
+    "I am stressed and exhausted",
+    "The weather exists",
+    "That movie was sick",
 ]
+
+
 
 # Human labels for each post above.
 # Allowed labels in the starter:
@@ -58,14 +81,39 @@ SAMPLE_POSTS = [
 #   - "negative"
 #   - "neutral"
 #   - "mixed"
+
+
+# TRUE_LABELS = [
+#     "positive",  # "I love this class so much"
+#     "negative",  # "Today was a terrible day"
+#     "mixed",     # "Feeling tired but kind of hopeful"
+#     "neutral",   # "This is fine"
+#     "positive",  # "So excited for the weekend"
+#     "negative",  # "I am not happy about this"
+# ]
+
+
+# UPDATED LABELS:
+
 TRUE_LABELS = [
-    "positive",  # "I love this class so much"
-    "negative",  # "Today was a terrible day"
-    "mixed",     # "Feeling tired but kind of hopeful"
-    "neutral",   # "This is fine"
-    "positive",  # "So excited for the weekend"
-    "negative",  # "I am not happy about this"
+    "positive",
+    "negative",
+    "mixed",
+    "neutral",
+    "positive",
+    "negative",
+    "mixed",
+    "positive",
+    "negative",
+    "neutral",
+    "mixed",
+    "negative",
+    "positive",
+    "negative",
+    "neutral",
+    "positive",
 ]
+
 
 # TODO: Add 5-10 more posts and labels.
 #
@@ -92,3 +140,6 @@ TRUE_LABELS = [
 #
 # Remember to keep them aligned:
 #   len(SAMPLE_POSTS) == len(TRUE_LABELS)
+
+
+print(len(SAMPLE_POSTS), len(TRUE_LABELS))

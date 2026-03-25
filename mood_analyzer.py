@@ -1,4 +1,7 @@
 # mood_analyzer.py
+
+import string
+
 """
 Rule based mood analyzer for short text snippets.
 
@@ -36,26 +39,54 @@ class MoodAnalyzer:
     # Preprocessing
     # ---------------------------------------------------------------------
 
+    # def preprocess(self, text: str) -> List[str]:
+    #     """
+    #     Convert raw text into a list of tokens the model can work with.
+
+    #     TODO: Improve this method.
+
+    #     Right now, it does the minimum:
+    #       - Strips leading and trailing whitespace
+    #       - Converts everything to lowercase
+    #       - Splits on spaces
+
+    #     Ideas to improve:
+    #       - Remove punctuation
+    #       - Handle simple emojis separately (":)", ":-(", "🥲", "😂")
+    #       - Normalize repeated characters ("soooo" -> "soo")
+    #     """
+    #     cleaned = text.strip().lower()
+    #     tokens = cleaned.split()
+
+    #     return tokens
+
+    # def preprocess(self, text: str) -> List[str]:
+    #     cleaned = text.strip().lower()
+
+    #     for ch in [".", ",", "!", "?", ";", ":"]:
+    #       cleaned = cleaned.replace(ch, "")
+
+    #     tokens = cleaned.split()
+    #     return tokens
+
+
+
+     
+
     def preprocess(self, text: str) -> List[str]:
-        """
-        Convert raw text into a list of tokens the model can work with.
+      cleaned = text.strip().lower()
 
-        TODO: Improve this method.
+      # Remove common ASCII punctuation, keep letters/numbers/emojis.
+      translator = str.maketrans("", "", string.punctuation)
+      cleaned = cleaned.translate(translator)
 
-        Right now, it does the minimum:
-          - Strips leading and trailing whitespace
-          - Converts everything to lowercase
-          - Splits on spaces
+      tokens = cleaned.split()
+      return tokens
 
-        Ideas to improve:
-          - Remove punctuation
-          - Handle simple emojis separately (":)", ":-(", "🥲", "😂")
-          - Normalize repeated characters ("soooo" -> "soo")
-        """
-        cleaned = text.strip().lower()
-        tokens = cleaned.split()
 
-        return tokens
+
+
+
 
     # ---------------------------------------------------------------------
     # Scoring logic
